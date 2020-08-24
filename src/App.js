@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import ComponentOne from './Components/ComponentOne';
+import CustomComponnet from './Components/CustomeComponnet';
 
 const data = [
   { id: 1, name: 'shubham', age: 20},
@@ -18,7 +19,12 @@ class App extends Component {
       {
         data.map((data, index) => {
           return (
-            <ComponentOne name={data.name} age={data.age} key={data.id}/>
+            <div>
+            <div key={data.id}>
+            <ComponentOne name={data.name} age={data.age} />
+            </div>
+            <CustomComponnet index={index}/>
+            </div>
           )
         })
       }

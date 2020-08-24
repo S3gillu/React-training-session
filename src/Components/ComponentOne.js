@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './ComponentOne.css';
 
-import ComponentTwo from './ComponentTwo';
+import Clock from './Clock';
+import CounterComponent from '../CounterComponent';
 
 class ComponentOne extends Component {
 
@@ -9,7 +10,7 @@ class ComponentOne extends Component {
         super(props);
         this.state = {
             showMessage: false,
-            showAlertMessage: false
+            showAlertMessage: false,
         }
     }
 
@@ -24,6 +25,7 @@ class ComponentOne extends Component {
             showAlertMessage: !this.state.showAlertMessage
         })
     }
+
 
     render() {
        const { showMessage, showAlertMessage } = this.state;
@@ -40,7 +42,8 @@ class ComponentOne extends Component {
            <button onClick={() => this.onClickShowAlertHandler()}>Show Alert</button>
            { showMessage && <p style={{ backgroundColor: 'red' }}> I am show message</p>}
            { showAlertMessage && <p style={{ backgroundColor: 'blue' }}> I am show show Alert message</p>}
-           <ComponentTwo />
+           <Clock />
+           <CounterComponent />
            </div>
        )
    }
