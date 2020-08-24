@@ -5,7 +5,7 @@ import ComponentOne from './Components/ComponentOne';
 import CustomComponnet from './Components/CustomeComponnet';
 
 const data = [
-  { id: 1, name: 'shubham', age: 20},
+  { id: 1, name: 'shubham', age: 20, openModal: true},
   // { id: 2, name: 'amit', age: 25},
   // { id: 3, name: 'snehal', age: 30},
   // { id: 4, name: 'john', age: 20},

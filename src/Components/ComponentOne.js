@@ -3,6 +3,7 @@ import './ComponentOne.css';
 
 import Clock from './Clock';
 import CounterComponent from '../CounterComponent';
+import ShowMessageComponnet from './ShowMessageComponnet';
 
 class ComponentOne extends Component {
 
@@ -26,6 +27,10 @@ class ComponentOne extends Component {
         })
     }
 
+    componentDidUpdate = () => {
+        console.log('componnet did update is called')
+    }
+
 
     render() {
        const { showMessage, showAlertMessage } = this.state;
@@ -40,7 +45,8 @@ class ComponentOne extends Component {
            </div>
            <button onClick={() => this.onClickHandler()}>Click Me</button>
            <button onClick={() => this.onClickShowAlertHandler()}>Show Alert</button>
-           { showMessage && <p style={{ backgroundColor: 'red' }}> I am show message</p>}
+           {/* { showMessage && <p style={{ backgroundColor: 'red' }}> I am show message</p>} */}
+           { showMessage && <ShowMessageComponnet />}
            { showAlertMessage && <p style={{ backgroundColor: 'blue' }}> I am show show Alert message</p>}
            <Clock />
            <CounterComponent />
